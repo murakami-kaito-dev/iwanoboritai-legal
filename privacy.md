@@ -5,7 +5,7 @@ permalink: /privacy/
 
 ## プライバシーポリシー（イワノボリタイ）
 
-最終更新日：2025年10月5日
+最終更新日：2026年8月30日
 
 本プライバシーポリシー（以下「本ポリシー」）は、イワノボリタイ開発チーム（以下「当方」）が提供する「イワノボリタイ」（以下「本サービス」）における、利用者情報の取扱いを定めるものです。
 
@@ -63,7 +63,11 @@ permalink: /privacy/
 
 実行基盤：Google Cloud（Cloud Run 等）
 
+地図・ジム写真等の表示：Google Maps Platform／Places API（Google LLC）
+
 当方は、個人情報保護契約等のもと必要最小限の範囲で情報を預託・処理します。
+
+Google による情報の取扱いについては、[Google プライバシーポリシー](https://policies.google.com/privacy)をご参照ください。
 
 ### 6. 保存期間
 
