@@ -96,7 +96,7 @@ h1 { font-size: 26px; line-height: 1.4; margin: 0 0 8px; letter-spacing: 0.01em;
   margin: 0 0 32px;
 }
 .toc-title { margin: 0 0 8px; padding: 0; border: 0; font-size: 16px; }
-.toc ol { margin: 0; padding-left: 1.4em; columns: 2; column-gap: 24px; }
+.toc ol { margin: 0; padding-left: 0; list-style: none; columns: 2; column-gap: 24px; } /* 見出し文中の番号を使う（ol の自動番号と二重にしない） */
 .toc li { margin: 0 0 4px; break-inside: avoid; }
 .toc a { text-decoration: none; }
 .toc a:hover { text-decoration: underline; }
