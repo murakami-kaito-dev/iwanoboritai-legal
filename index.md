@@ -29,8 +29,8 @@ doc: index
 
 | 日付 | 対象 | 内容 |
 |---|---|---|
-| 2026-09-06 | [利用規約]({{ '/terms/' | relative_url }}#history)・[プライバシーポリシー]({{ '/privacy/' | relative_url }}#history) | 全面改訂。対象に Web 版を追加、ログインを Google／Apple のみに変更、Web 版の広告（Google AdSense）と Cookie の利用を追記、委託先を最新化。要点サマリ・目次・改訂履歴を新設。 |
-| 2026-08-30 | 利用規約・プライバシーポリシー | Google Maps Platform 利用に伴う条項を追加。掲載場所を Notion から本サイト（GitHub Pages）へ移行。 |
+| 2026年9月6日 | [利用規約]({{ '/terms/' | relative_url }}#history)・[プライバシーポリシー]({{ '/privacy/' | relative_url }}#history) | 全面改訂。対象に Web 版を追加、ログインを Google／Apple のみに変更、Web 版の広告（Google AdSense）と Cookie の利用を追記、委託先を最新化。要点サマリ・目次・改訂履歴を新設。 |
+| 2026年8月30日 | 利用規約・プライバシーポリシー | Google Maps Platform 利用に伴う条項を追加。掲載場所を Notion から本サイト（GitHub Pages）へ移行。 |
 
 ## お問い合わせ {#contact}
 
