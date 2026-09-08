@@ -1,4 +1,25 @@
+# イワノボリタイ 規約類（GitHub Pages / Jekyll）
+# テーマは使わず、_layouts/legal.html + assets/legal.css の自前レイアウトで描画する。
 title: イワノボリタイ 規約類
-description: ボルダリングジム検索・ボル活記録アプリ「イワノボリタイ」の利用規約・プライバシーポリシー
-theme: minima
+description: ボルダリングジム検索・ボル活記録サービス「イワノボリタイ」（iOS アプリ・Web 版）の利用規約・プライバシーポリシー
 lang: ja
+
+# 公開 URL（プロジェクトページのため baseurl はリポジトリ名）
+url: https://murakami-kaito-dev.github.io
+baseurl: /iwanoboritai-legal
+
+# 導線・連絡先（独自ドメイン取得後はここだけ差し替える）
+app_store_url: https://apps.apple.com/jp/app/id6753177257
+web_url: https://bouldering-app-dev.web.app
+contact_email: km.solo.developer@gmail.com
+operator_name: イワノボリタイ開発チーム
+
+markdown: kramdown
+kramdown:
+  auto_ids: true
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,166 @@
+/* イワノボリタイ 規約ページ
+   読みやすさ最優先の明るい文書スタイル。参考: habitmaster-support / mri-study-docs（同作者の他アプリ）。
+   色は 8 つ、文字段は 5 段（14 / 16 / 18 / 20 / 26）、角丸は 2 種（6 / 10）に絞る。 */
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #4a515c;
+  --line: #d9dde3;
+  --card: #f2f4f7;
+  --brand: #1c1c1e;      /* ヘッダー帯（文字色と同じ墨。色の種類を増やさない） */
+  --tape: #5b8cff;       /* 装飾の差し色（線・帯）にだけ使う。文字色には使わない */
+  --link: #1f4fc9;       /* 白地で 7:1・薄い地でも 5:1 以上のリンク色 */
+  --note-bg: #f2f4f7;    /* 要点の地はカードと同じ。左の帯で区別する */
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
+
+.skip {
+  position: absolute; left: -9999px; top: 8px;
+  background: var(--brand); color: #fff; padding: 8px 12px; border-radius: 6px;
+}
+.skip:focus { left: 8px; z-index: 100; }
+
+a { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--tape); outline-offset: 2px; border-radius: 6px; }
+
+/* ── ヘッダー帯 ───────────────────────────── */
+header.site {
+  background: var(--brand);
+  color: #fff;
+  border-bottom: 4px solid var(--tape);
+}
+header.site .wrap { padding: 20px 20px; }
+.site-name { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: 0.02em; }
+.site-name a { color: #fff; text-decoration: none; }
+.site-name a:hover { text-decoration: underline; }
+.site-sub { margin: 4px 0 0; font-size: 14px; color: var(--line); }
+
+/* ── 本文 ───────────────────────────────── */
+main.wrap { padding-top: 32px; }
+
+h1 { font-size: 26px; line-height: 1.4; margin: 0 0 8px; letter-spacing: 0.01em; }
+.meta { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+
+.doc h2 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 44px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+.doc h3 { font-size: 16px; margin: 24px 0 8px; }
+
+.doc p { margin: 0 0 16px; }
+.doc p, .doc li { word-break: auto-phrase; }
+.doc ul, .doc ol { margin: 0 0 16px; padding-left: 1.4em; }
+.doc li { margin: 0 0 6px; }
+.doc li > ul, .doc li > ol { margin-top: 6px; margin-bottom: 0; }
+.doc strong { font-weight: 700; }
+.doc hr { border: 0; border-top: 1px solid var(--line); margin: 32px 0; }
+
+/* 要点（注記の箱） */
+.note {
+  background: var(--note-bg);
+  border-left: 4px solid var(--tape);
+  border-radius: 6px;
+  padding: 16px 18px;
+  margin: 0 0 32px;
+}
+.note > strong { display: block; margin-bottom: 8px; font-size: 16px; }
+.note ul { margin: 0; padding-left: 1.3em; }
+.note li { margin: 0 0 6px; }
+.note-foot { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+
+/* 目次 */
+.toc {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 0 0 32px;
+}
+.toc-title { margin: 0 0 8px; padding: 0; border: 0; font-size: 16px; }
+.toc ol { margin: 0; padding-left: 1.4em; columns: 2; column-gap: 24px; }
+.toc li { margin: 0 0 4px; break-inside: avoid; }
+.toc a { text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+
+/* 表（改訂履歴など） */
+.doc table { width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 14px; }
+.doc th, .doc td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+.doc th { background: var(--card); font-weight: 700; }
+.doc td:first-child, .doc time { white-space: nowrap; }
+
+/* 囲み（条文中の補足） */
+.callout {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 0 0 16px;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* トップの 2 枚のカード */
+.doc-lead { margin: 0 0 24px; }
+.cards { margin: 0 0 32px; }
+.cards .card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 0 0 14px;
+  color: var(--fg);
+  text-decoration: none;
+}
+.cards .card:hover { border-color: var(--tape); }
+.cards .card h2 { margin: 0 0 6px; padding: 0; border: 0; font-size: 18px; color: var(--link); }
+.cards .card p { margin: 0 0 8px; }
+.card-meta { display: block; color: var(--muted); font-size: 14px; }
+.card-cta { display: inline-block; margin-top: 6px; color: var(--link); font-weight: 700; }
+
+/* 関連ページ（ブロック型のリンク） */
+nav.links { margin: 40px 0 0; }
+nav.links a {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 0 0 10px;
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 700;
+}
+nav.links a:hover { border-color: var(--tape); }
+nav.links a span { display: block; color: var(--muted); font-size: 14px; font-weight: 400; }
+
+/* フッター */
+footer.foot { border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+footer.foot .wrap { padding: 20px 20px 40px; }
+footer.foot p { margin: 0 0 6px; }
+
+/* 小さい画面 */
+@media (max-width: 600px) {
+  .toc ol { columns: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
